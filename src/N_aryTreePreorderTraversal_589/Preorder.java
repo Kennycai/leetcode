@@ -4,8 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * leetcode 589.N叉树的前序遍历
+ *给定一个 N 叉树，返回其节点值的前序遍历。
+ */
 public class Preorder {
-
     //递归实现版本
     List<Integer> list = new ArrayList<>();
     public List<Integer> preorder(Node root) {
