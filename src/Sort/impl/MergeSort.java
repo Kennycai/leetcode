@@ -5,6 +5,7 @@ import Sort.Sort;
  * 归并排序
  * 将数组拆分成一个个的小数组，将小数组进行排序合并
  * T(n) = O(n * log(n))
+ * 稳定排序,非原地排序
  */
 public class MergeSort implements Sort {
     @Override
