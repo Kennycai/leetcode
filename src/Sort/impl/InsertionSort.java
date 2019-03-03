@@ -6,6 +6,7 @@ import Sort.Sort;
  * 插入排序
  * 将数组一分为二，前面的是已排序好的，将后面的插入到已排序的数组中
  * T(n) = O(n^2)
+ * 原地排序，稳定排序
  */
 public class InsertionSort implements Sort {
     @Override

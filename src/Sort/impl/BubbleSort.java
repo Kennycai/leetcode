@@ -8,6 +8,7 @@ import java.util.List;
 /**
  * 冒泡排序
  * T(n) = O(n^2)
+ * 原地排序，稳定排序
  */
 public class BubbleSort implements Sort {
     @Override
