@@ -45,9 +45,9 @@ public class QuickSort implements Sort {
             }
         }
         //将中值换到中值位
-        int temp = list[i];
-        list[i] = list[r];
-        list[r] = temp;
+        list[r] = list[i];
+        list[i] = pval;
+
         return i;
     }
 }
