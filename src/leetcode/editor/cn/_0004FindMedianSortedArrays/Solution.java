@@ -17,10 +17,10 @@ public class Solution {
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int l1 = nums1.length, l2 = nums2.length;
         int left = (l1 + l2 + 1) / 2, right = (l1 + l2 + 2) / 2;
-        return (findMid(nums1, 0, nums2, 0, left) + findMid(nums1, 0, nums2, 0, right)) / 2;
+        return (findKth(nums1, 0, nums2, 0, left) + findKth(nums1, 0, nums2, 0, right)) / 2;
     }
 
-    private double findMid(int[] nums1, int i, int[] nums2, int j, int k) {
+    private double findKth(int[] nums1, int i, int[] nums2, int j, int k) {
         if (i >= nums1.length) {
             //nums1为空数组
             return nums2[j + k - 1];
@@ -35,9 +35,9 @@ public class Solution {
         int mid1 = (i + k / 2 - 1 < nums1.length) ? nums1[i + k / 2 - 1] : Integer.MAX_VALUE;
         int mid2 = (j + k / 2 - 1 < nums2.length) ? nums2[j + k / 2 - 1] : Integer.MAX_VALUE;
         if (mid1 < mid2) {
-            return findMid(nums1, i + k / 2, nums2, j, k - k / 2);
+            return findKth(nums1, i + k / 2, nums2, j, k - k / 2);
         } else {
-            return findMid(nums1, i, nums2, j + k / 2, k - k / 2);
+            return findKth(nums1, i, nums2, j + k / 2, k - k / 2);
         }
     }
 }
