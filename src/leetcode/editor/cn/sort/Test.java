@@ -21,5 +21,8 @@ public class Test {
 
         int[] num6 = {7, 5,8, 9, 6, 11, 44};
         System.out.println(Arrays.toString(QuickSort.sort(num6)));
+
+        int[] num7 = {7, 5,8, 9, 6, 11, 44};
+        System.out.println(Arrays.toString(HeapSort.heapSort(num7)));
     }
 }

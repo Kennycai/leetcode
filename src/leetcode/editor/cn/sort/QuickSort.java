@@ -5,19 +5,22 @@ import java.util.Arrays;
 import static leetcode.editor.cn.common.Utils.swap;
 
 public class QuickSort {
-    public static int[] sort(int[] nums) {
-        sortHelp2(nums, 0, nums.length - 1);
-        return nums;
+    public static int[] sort(int[] arr) {
+        if (arr == null || arr.length < 2) {
+            return arr;
+        }
+        sortHelp2(arr, 0, arr.length - 1);
+        return arr;
     }
 
     /**
      * 标准快排
      */
-    private static void sortHelp(int[] nums, int left, int right) {
+    private static void sortHelp(int[] arr, int left, int right) {
         if (left < right) {
-            int[] limit = partition(nums, left, right);
-            sortHelp(nums, left, limit[0] - 1);
-            sortHelp(nums, limit[1] + 1, right);
+            int[] limit = partition(arr, left, right);
+            sortHelp(arr, left, limit[0] - 1);
+            sortHelp(arr, limit[1] + 1, right);
         }
     }
 
